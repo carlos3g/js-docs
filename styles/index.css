@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-card-background);
+  padding: 0 32px;
+  font-size: 3.6rem;
+  font-weight: medium;
+  height: 6rem;
+  width: 100vw;
+}
+
+header .logo {
+  height: 3.4rem;
+  width: 3.4rem;
+  margin-right: 1.4rem;
+}
