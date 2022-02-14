@@ -1,4 +1,5 @@
 body > header {
+  position: fixed;
   display: flex;
   align-items: center;
   background-color: var(--color-card-background);
@@ -17,12 +18,39 @@ body > header .logo {
 
 #main-container {
   display: flex;
+  margin-top: var(--header-height);
+}
+
+aside {
+  padding: 32px 16px;
+  width: 20vw;
+}
+
+aside li {
+  list-style: none;
+}
+
+aside li + li {
+  margin-top: 5px;
+}
+
+#contents-bar {
+  border-right: 1px solid var(--color-background-tint-10p);
+}
+
+#contents-bar li a {
+  font-size: var(--font-size-body);
 }
 
 main {
-  min-height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height));
+  overflow-y: scroll;
   padding: 32px;
   width: 80vw;
+}
+
+main::-webkit-scrollbar {
+  display: none;
 }
 
 main > section + section {
@@ -47,8 +75,12 @@ main > section p {
   margin: 15px 0;
 }
 
-aside {
-  width: 20vw;
+#topics-bar {
+  border-left: 1px solid var(--color-background-tint-10p);
+}
+
+#topics-bar li a {
+  font-size: var(--font-size-small);
 }
 
 footer {
